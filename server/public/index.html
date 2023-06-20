@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Let's go!</title>
+  <link rel="shortcut icon" href="./assets/imgs/favicon.ico" type="image/x-icon" />
+  <!-- Icon: Font Awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    /* custom class  */
+      @layer utilities {
+        .text-danger {
+          color: red;
+          font-weight: bold;
+        }
+      }
+    </style>
+  <script defer src="./tailwind.config.js"></script>
+  <!-- Custom Style  -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Javascript  -->
+  <script defer src="./script.js"></script>
+</head>
+
+<body
+  class="scroll-smooth w-[100vm] h-[100vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-300">
+  <div class="container">
+    <div id="topPage" class="header">
+      <ul>
+        <li class="text-danger">Home</li>
+        <li class="text-[green]">Services</li>
+
+      </ul>
+    </div>
+    <div class="main">
+      <div class="sidebar"></div>
+      <div class="content">
+        <div class="text-center text-black text-5xl">Hello World</div>
+        <div class="p-1 grid grid-cols-3 gap-x-[37px] max-w-6xl">
+          <div class="bg-[blue] hover:bg-[black] hover:cursor-pointer h-[100px] rounded-lg object-cover">
+            <img class="h-[200px]" src="https://i.pinimg.com/736x/c3/4e/d6/c34ed601117ae1bb5797118cb289aae8.jpg"
+              alt="Image" />
+          </div>
+          <div class="bg-[blue] h-[100px] rounded-lg object-cover">
+            <img class="h-[200px]" src="https://i.pinimg.com/736x/c3/4e/d6/c34ed601117ae1bb5797118cb289aae8.jpg"
+              alt="Image" />
+          </div>
+          <div class="bg-[blue] h-[200px] rounded-lg object-cover overflow-hidden">
+            <img class="h-[200px]" src="https://i.pinimg.com/736x/c3/4e/d6/c34ed601117ae1bb5797118cb289aae8.jpg"
+              alt="Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer lg:text-center text-namStyle mt-[500px]">
+    </div>
+  </div>
+  <div id="goTop"></div>
+</body>
+
+</html>

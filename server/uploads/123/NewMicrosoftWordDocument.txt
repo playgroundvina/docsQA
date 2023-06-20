@@ -1,0 +1,650 @@
+1. Trade
+
+Trading token is the core service of Pools Winery AI Dex. Let explore our service.
+
+Pools Winery AI Dex is an Automated Market Maker (AMM), and trading is at the heart of it all. Winery is
+
+the leading and ever
+-
+expanding AMM on the Binance Smart Chain, and one of the most popular
+
+Decentralized Exchanges (DEX) ever!
+
+Our Pools Winery AI Dex
+ 
+offers several features that support decentralized trading:
+
+Exchange
+
+Pools Winery AI Dex lets users trade without the need to go through a Centralized Exchange. Everything
+
+you do on Winery is routed directly through your own wallet, no middle man, no other
+ 
+people needed to
+
+involve with your trading.
+
+Liquidity Pools
+
+You can only swap tokens on Pools Winery AI Dex if there is enough liquidity for those tokens. If nobody
+
+has added much liquidity for the tokens you want to swap, it will be difficult, expensive,
+ 
+or even
+
+impossible to do so.
+
+Providing liquidity will get you LP Tokens, which will earn you rewards in the form of trading fees for
+
+making sure there's always liquidity for the exchange to use.
+
+1.1 Token exchange
+
+Token exchange, an exchange of one B
+EP
+-
+20 token for another, has never been easier. With Pools Winery
+
+AI Dex, you only need to select the token you want to trade with and simply click trade to exchange it for
+
+another.
+
+However, this trade will be affected by how many tokens are currently in t
+he pool, you can only trade
+
+with the maximum number of tokens in the pool and no more.
+
+When you make a token swap (trade) on the exchange you will pay a 0.17% trading fee, which is broken
+
+down as follows:
+
+0.12%
+ 
+-
+ 
+Returned to Liquidity Pools in the form o
+f a fee reward for liquidity providers.
+
+0.05%
+ 
+-
+ 
+Sent to the Pools Winery AI Dex Treasury.
+
+1.2 Token exchange
+
+Quick guide on how to trade on Pools Winery AI Dex. It's easy to trade, Pools Winery AI Dex help you
+
+calculate all numbers and ratio you nee
+d to notice before trading.
+
+Setting up
+
+Before trading, you need to create a BNB Smart Chain
+-
+compatible wallet. Besides, you need to have
+
+some BEP20 tokens to trade with
+
+1.Go to the Pools Winery AI Dex exchange page.
+
+2.Connect your Wallet to Pools Winery
+ 
+AI Dex by clicking Connect Wallet in the top right
+-
+hand corner.
+
+3. Choose the token you want to trade from the list of the drop
+-
+down menu in the From section. Please
+
+make sure you actually have some tokens before making the trade.
+
+4. Choose the token you want to exchange it to, and type in the amount you want to exchange To or
+
+From, the amount of the remaining box will be calculated automatically for you and you can click on
+
+exchange to make the change happen.
+
+5. After clicking on t
+he Swap button, there will be a window with all the information you have entered
+
+for you to check again.
+
+Once you have carefully checked through all the information, please click the Confirm Swap button to
+
+execute the order to exchange tokens.
+
+6. Now it is
+ 
+done, you can start other trades or choose another service from Winery.
+
+You can see your details transaction on BSCscan by clicking View on bscscan.
+
+1.3 Liquidity pool
+
+What is a Liquidity pool?
+
+When you add tokens to the liquidity pool, you recei
+ve Liquidity Provider (LP) tokens and share fees.
+
+LP Token
+
+When tokens are deposited into a crypto liquidity pool, the platform automatically generates a new
+
+token that represents the share the depositor owns of that pool. This is called a liquidity provid
+er (LP)
+
+token, and it can be used for a multitude of functions both within its native platform and other
+
+decentralized finance (DeFi) apps.
+
+There are many kinds of LP tokens on the DEX, It’s up to pairs of tokens that providers add to liquidity
+
+pools.
+
+For
+ 
+instance:
+
+If you deposit DPOOLS and BNB in the liquidity pool, you will receive DPOOLS
+ 
+-
+ 
+BNB LP tokens. The
+
+number of LP tokens you receive represents your portion of the DPOOLS
+ 
+-
+ 
+BNB liquidity pool. You can
+
+also eliminate liquidity and then repay your fun
+ds at any time.
+
+Liquidity Providers earn trading fees
+
+By providing liquidity, you are rewarded in the form of transaction fees when others use the liquidity
+
+pool.
+
+Whenever someone trades on Pools Winery AI Dex, the trader pays a 0.17% fee, of which 0.12% i
+s added
+
+to the Liquidity Pool of the swap pair traded.
+
+For instance:
+
+There are 10 LP tokens representing 10 DPOOLS and 10 BNB tokens.
+
+* 1 LP token = 1 DPOOLS + 1 BNB
+
+* Someone trades 10 DPOOLS for 10 BNB.
+
+* Someone else trades 10 BNB for 10 DPOOLS.
+
+* The D
+POOLS/BNB liquidity pool now has 10.012 DPOOLS and 10.012 BNB.
+
+* Each LP token is now worth 1.00012 DPOOLS+ 1.00012 BNB.
+
+To make being a liquidity provider even more worth your while, you can also put your LP tokens to work
+
+whipping up some fresh yield on the DPOOLS Farms, while still earning your 0.12% trading fee reward.
+
+Impermanent Loss
+
+Providing liquidity is not without
+ 
+risk, as you may be exposed to impermanent loss which means tokens
+
+in the AMM pool instead of your wallet and you may not be able to withdraw full fund until there are
+
+others adding more of the same tokens to the pool.
+
+1.4 Aggregator Function
+
+Optimizi
+ng your swapping experience by finding the best swapping route
+
+Find the best
+-
+optimized route
+
+Pools Winery AI Dex bridges over most major decentralized exchanges such as Biswap, PancakeSwap,
+
+BabySwap, or the 0x network.
+
+When you select a trading pair on P
+ools Winery AI Dex, for example, AVAX to DOT, Pools Winery AI Dex
+
+compares and analyzes the most optimized rates for the pair on each exchange.
+
+Interaction Aggregation
+
+MultiPath allows you to engage with several services and smart contracts in a single gas
+-
+efficient
+
+transaction. For example, if you want to exchange BUSD for WBNB and then deposit the WBNB into
+
+Pandora Swap for DOT, Pools Winery AI Dex can now accomplish it all in just one step.
+
+Pools Winery AI Dex routing algorithm explores all relevant rout
+es, even those with additional hops. For
+
+reference, if you want to acquire DOT from BUSD, a direct BUSD
+ 
+-
+> DOT route might not be the best
+
+option.
+
+In this case, getting the best rate may include swapping BUSD
+ 
+-
+> WBNB
+ 
+-
+> ETH. There is no need to
+
+compute all
+ 
+of this complexity (across all DEXes) by hand; the Pools Winery AI Dex Aggregator function
+
+does it for you!
+
+Gas Fee Optimizations
+
+To minimize gas use across the platform, Pools Winery AI Dex employs a number of technical evaluation
+
+methods. When analyzing
+ 
+exchanging routes, gas fee are also taken into account.
+
+You can check for the current status of the market gas fee by using BSCscan Gas Tracker
+
+Note:
+
+* The gas price (chosen by the person submitting the transaction) influences the time required for the
+
+transaction to be validated.
+
+* If the gas price is too low, a transaction might never be incorporated into a block.
+
+* Gas costs are accounted for in the route calculations.
+
+2. Earn (Coming Soon)
+
+Learn what you can use LP tokens and POOLS on to earn even bigger rewards
+
+Not only you can invest and hold on to our LP tokens and DPOOLS for a rise in the value of your tokens,
+
+but you can also stake those tokens to earn even more free tokens with Winery.
+
+Oak Barrel
+
+Pools Winery AI Dex let user stake their own LP tokens to earn more DPOOLS with every token staked
+
+this way. Please find more information about Oak Barrel in the next section.
+
+Champagne
+
+The Champagne function is as easy as staking DPOOLS t
+o earn other tokens on Pools Winery AI Dex. It is
+
+just that simple. We are developing some other pool that allows you to stake other tokens than DPOOLS.
+
+2.1 Oak Barrel
+
+Staking your LP tokens for even more DPOOLS
+
+Pools Winery AI Dex let user stake t
+heir LP tokens to earn even more DPOOLS with every token staked
+
+this way. This is a method for your token to work for you even when it stays in the liquidity pool while
+
+you can double your reward, one from the liquidity pool and the other from Oak Barrel.
+
+Collecting your rewards from Oak Barrel
+
+Oak Barrel will bring you DPOOLS rewards over time. You can collect these rewards and use them to get
+
+more LP Tokens, stake them in Champagne, use them to play Win for a chance to win big, or anything
+
+else you want
+ 
+to. Essentially DPOOLS is just another token you own like anything else, you may also
+
+trade it for another token.
+
+Reward calculations
+
+Oak Barrel (Yield Farm) APR calculations include both:
+
+LP rewards APR earned through providing liquidity and;
+
+Farm bas
+e rewards APR earned staking LP Tokens in the Farm.
+
+When you stake your LP tokens in a farm to earn DPOOLS, you're still providing liquidity to the liquidity
+
+pool, so you earn LP rewards too!
+
+Calculating Farm Base Reward APR
+
+The Farm Base APR is calculated according to the farm multiplier and the total am
+ount of liquidity in the
+
+farm
+ 
+-
+ 
+this is the amount of DPOOLS distributed to the farm.
+
+Calculating LP Reward APR
+
+On top of that, farmers receive LP rewards for providing liquidity. Here's an example of calculating LP
+
+rewards:
+
+In the WBNB/BUSD pair above, we
+ 
+see these values:
+
+Liquidity: $40.66K
+
+Volume 24H: $792,246
+
+Volume 7D: $20.41K
+
+Calculate yearly fees:
+
+Use the 24H volume to calculate the fee share of liquidity providers in the pool (based on the 0,12%
+
+trading fee structure):
+
+$20.410*0,12/100 = $24.492
+
+Next, use that fee share to estimate the projected yearly fees earned by the pool (based on the current
+
+24h volume): $792,246365 = $289.169,854
+
+We can now use the yearly fees to calculate the LP rewards APR: That's yearly fees divided by liquidity:
+
+($289.
+169,854/$40.660)*100 =711,19% LP reward APR
+
+2.2 How to use Oak barrel
+
+Getting prepared
+
+You need a little setup before earning profits with Oak Barrel.
+
+To farm with Oak Barrel you need LP Tokens matching with the Farm. For instance, you can farm on a
+
+BUSD
+-
+DPOOLS farm when you have BUSD
+-
+DPOOLS LP tokens.
+
+If you don't have LP tokens, visit here to know how to add a liquidity pool and get LP tokens.
+
+Let's get started with these easy following steps.
+
+Finding your Farm
+
+Before you proceed, you'll want to choose a Farm that's right for you. Visit the Oak Barrel page and you’ll
+
+see a list of available Farms.
+
+When you find a Farm that you'd like to use, note down the trading pair, e.g. DPOOLS
+-
+BUSD in case you
+
+need it later.
+
+Putting your LP Tokens into a farm
+
+Now that you have your LP Tokens, you’re ready to start staking them on a Farm and earning profits!
+
+Putting your LP Tokens into the Farm
+
+1. Go to the Oak Barrel page and locate the exact Farm you have LP tokens and want t
+o farm.
+
+When you’re ready, click the Enable button and confirm your action in your wallet.
+
+2. Click Stake LP and a new window will appear.
+
+Type the amount of LP Tokens you would like to farm with into the field, or just click Max to use all of
+
+your LP Toke
+ns.
+
+3. When you have the amount entered, the Confirm button will light up. Click it. Your wallet will ask you
+
+to confirm your action.
+
+4. After a short wait, the window will close, and you will see your new staked LP Token balance in the
+
+details.
+
+Adding or
+ 
+removing LP Tokens from a Farm
+
+You can add more LP Tokens to a Farm at a later date or take some out of a Farm do this very easily
+
+whenever you'd like.
+
+1. Return to the Oak Barrel page. At the top of the page, you'll see a Staked only toggle. Click the tog
+gle.
+
+You should now only see the pairs you have LP Tokens in on the list, making it easier to find your Farm.
+
+2. Find the Farm you have LP Tokens in, and click the row to view details. You will see a
+ 
+-
+ 
+and + button on
+
+the right
+-
+hand side. Click
+ 
+-
+ 
+to remove
+ 
+LP Tokens, or + to add more LP Tokens.
+
+3. A window will open that looks like the one you used earlier to first stake your LP Tokens. Like last time,
+
+type the amount you would like to unstake/stake, or click Max to remove/add all available LP Tokens.
+
+4. Ma
+ke sure your information is correct. When you are ready, click the Confirm button and confirm the
+
+action in your wallet.
+
+5. After a short wait, your new balance will show in the details section of your LP Token pair. If you've
+
+unstaked your LP Tokens, any
+ 
+unharvested rewards you had will automatically have been collected.
+
+Collecting your farming rewards
+
+Farming will bring you DPOOLS rewards over time. You can collect these rewards and use them to get
+
+more LP Tokens, stake them in Champagne, use them to play
+ 
+the lottery, or anything else you’d like.
+
+Returning to your Oak Barrel to Harvest
+
+You can harvest both your Oak Barrel and Champagne rewards together from the Home page. If you'd
+
+like to collect your Oak Barrel rewards only, please follow the steps below.
+
+To collect your rewards, you’ll need to visit your chosen Farm and collect the DPOOLS waiting for you.
+
+.
+
+1. Return to the Oak Barrel via our menu to the left of the Pools Winery AI Dex site.
+
+2. Find the Oak Barrel you staked your LP Tokens in, and click t
+he row to view details. You should see an
+
+estimate of your rewards under “DPOOLS earned”.
+
+3. Click the Harvest button and confirm the action in your wallet.
+
+After a short wait, the DPOOLS will be claimed to your wallet for you to use as you like.
+
+2.2 Champagne
+
+The choice of staking DPOOLS for any other token is all yours. It is all simple and easy with Pools Winery
+
+AI Dex Champagne
+
+Staking in Champagne
+ 
+lets you earn more tokens even while you are asleep! Be it any tokens of your
+
+choosing, you can stake DPOOLS to get more of them.
+
+It's simpler than staking with Oak Barrel because you don't need LP tokens which cost you 2 types of
+
+token staked. You only ne
+ed to stake one token to start earning with Champagne: usually DPOOLS,
+
+however, we are working on more flavor of our champagne so you can stake other tokens than DPOOLS
+
+to earn even more with Pools Winery AI Dex.
+
+Don't let your tokens stay in your wallet,
+ 
+put them to good use.
+
+2.3 How to stake in champagne
+
+Learn how you can use DPOOLS to stake for other token in our Champagne.
+
+Easier to Earn profits with Champagne!
+
+Unlike Oak Barrel, you just need to stake one token, usually DPOOLS to begin earning.
+
+Getting started with Champagne staking
+
+1. Go to the Champagne function page on the site.
+
+2. Connect to your digital wallet by clicking the Connect Wallet button (top right
+-
+hand side).
+
+3. Choose which Champagne you want to stake in.
+
+4. Once you choose a c
+hampagne, click the Enable button. You will need to confirm your decision on
+
+your wallet will ask you to confirm the action.
+
+5. The Enable button should now be replaced with Stake. Click the button to bring up the staking menu.
+
+6. Type in the amount to cho
+ose how much DPOOLS you want to stake then click Confirm. Your wallet
+
+will ask you to double
+-
+check it.
+
+7. The Confirm button will change to "Confirming", then once the transaction is successful, you’ll see
+
+your staked amount change and the button will chan
+ge again.
+
+8. You should now be able to see details on your Champagne. It will also show a Collect button to claim
+
+your staking rewards into your wallet.
+
+Adding and removing DPOOLS from a champagne
+
+You can easily add more DPOOLS to a Champagne, or move some DPOOLS to more profitable
+
+champagne. Here’s how you can move your staked POOLS.
+
+1. Either click the
+ 
+-
+ 
+to take some POOLS out of Champagne or the + to add more to the Champagne.
+
+2. Type in the amou
+nt you want to add or remove from the champagne and click Confirm for the action
+
+to be executed.
+
+3. Wait for a moment, you'll be able to see your new amount of staked tokens.
+
+3. NFT
+
+3.1 Market Place
+
+Welcome to Pools Winery AI, an innovative NFT Marketp
+lace that brings together the world of digital
+
+assets and blockchain technology. Step into a realm where creativity, ownership, and investment
+
+opportunities merge seamlessly.
+
+At Pools Winery AI, you will discover a captivating collection of NFTs curated
+ 
+from a diverse array of
+
+artists, creators, and collectors. Immerse yourself in a world where art, music, gaming, and collectibles
+
+blend harmoniously, offering a range of unique and valuable digital assets.
+
+Our marketplace is built on cutting
+-
+edge AI tech
+nology, providing you with advanced features and tools
+
+to enhance your NFT experience. Explore trending collections, filter through categories, and easily
+
+navigate our user
+-
+friendly interface to find the perfect NFTs that resonate with your interests and
+
+p
+references.
+
+With a focus on authenticity and provenance, Pools Winery AI ensures a secure and transparent
+
+environment for both buyers and sellers. Each NFT is backed by blockchain technology, verifying its
+
+ownership and preserving its unique value.
+
+Eng
+age in dynamic auctions and sales events, where you can participate in bidding wars and seize
+
+exclusive NFTs that capture your imagination. Connect with a vibrant community of NFT enthusiasts,
+
+artists, and collectors, fostering collaboration and the exchan
+ge of ideas.
+
+Whether you are an artist seeking a platform to showcase your creations, an investor looking for exciting
+
+opportunities, or an enthusiast eager to explore the world of digital ownership, Pools Winery AI is your
+
+gateway to the future of NFTs.
+
+Join us today and unlock a world of limitless possibilities where innovation, artistry, and technology
+
+intertwine. Discover, collect, and trade NFTs on Pools Winery AI, where the power of blockchain and AI
+
+converge to redefine the way we experience digi
+tal assets.
