@@ -1,11 +1,11 @@
 import React from 'react'
-
+//https://img.upanh.tv/2023/05/19/icon-chat-bot.png
 export const RegisterForm = () => {
     return (
         <div><section className="bg-gray-50 dark:bg-gray-900">
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                 <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-                    <img className="mr-2" src="https://img.upanh.tv/2023/05/19/icon-chat-bot.png" alt="logo" />
+                    <img className="mr-2 w-16" src="https://i.imgur.com/ynuqsXa.png" alt="logo" />
                     DocsQA
                 </a>
                 <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">

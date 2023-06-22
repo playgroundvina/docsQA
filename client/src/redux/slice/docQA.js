@@ -9,6 +9,7 @@ const initialState = {
     messagesResponse: [],
     isLoading: false,
     histories: [],
+    uploadDocQA: {}
 };
 
 export const uploadDoc = createAsyncThunk("doc/postDoc", async (data, thunkAPI) => {
@@ -17,22 +18,28 @@ export const uploadDoc = createAsyncThunk("doc/postDoc", async (data, thunkAPI) 
         const dataPostDoc = data[1]
         const url = `upload`;
         //const response = await docQAService.postDoc(dataPostDoc);
+        console.log(dataPostDoc?.file.length)
+        if (dataPostDoc?.file.length <= 0) {
+            toast.warning(`Please select the document you want to upload`)
+            return;
+        } else {
+            const axiosClient = axios.create({
+                baseURL: process.env.REACT_APP_URL_API,
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                    'Access-Control-Allow-Origin': '*',
+                },
+                paramsSerializer: (params) => queryString.stringify(params),
+            });
+            const response = await axiosClient.post(url, dataPostDoc);
 
-        const axiosClient = axios.create({
-            baseURL: process.env.REACT_APP_URL_API,
-            headers: {
-                'Content-Type': 'multipart/form-data',
-                'Access-Control-Allow-Origin': '*',
-            },
-            paramsSerializer: (params) => queryString.stringify(params),
-        });
-        const response = await axiosClient.post(url, dataPostDoc);
-
-        thunkAPI.dispatch(getDoc(dataGetListDoc));
-        if (response.data) {
-            toast.success('uploaded successfully')
+            thunkAPI.dispatch(getDoc(dataGetListDoc));
+            if (response.data) {
+                toast.success('uploaded successfully')
+            }
+            return response.data;
         }
-        return response.data;
+
 
     } catch (error) {
         console.log(error)
@@ -94,6 +101,21 @@ const docSlice = createSlice({
     reducers: {
     },
     extraReducers: (builder) => {
+        /// upload document
+        builder
+            .addCase(uploadDoc.pending, (state) => {
+                state.isLoading = true;
+            })
+            .addCase(uploadDoc.fulfilled, (state, action) => {
+                state.uploadDocQA = action.payload;
+                state.isLoading = false;
+                state.errors = null;
+            })
+            .addCase(uploadDoc.rejected, (state, action) => {
+                state.isLoading = false;
+                state.errors = action.error.message;
+            });
+        ///get document
         builder
             .addCase(getDoc.pending, (state) => {
                 state.isLoading = true;

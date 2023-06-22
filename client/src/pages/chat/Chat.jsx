@@ -84,8 +84,7 @@ const Chat = () => {
       };
       let documentId = documentQA?._id;
 
-      // gọi api stream
-
+      // call api stream
       let url = `${process.env.REACT_APP_URL_API}chatgpt/pdf/stream/${documentId}`;
       const ctrl = new AbortController();
       fetchEventSource(url, {
