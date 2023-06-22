@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import ModelService from './upload.service';
 import ModelController from './upload.controller';
 import { MongooseModule, SchemaFactory } from '@nestjs/mongoose';
-import ModelSchema from './schema/model.schema';
+import ModelSchema from './schema/upload.schema';
 
 @Module({
   imports: [

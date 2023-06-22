@@ -23,7 +23,7 @@ import { ApiConsumes, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { HTTP_STATUS } from 'src/shared/constants/http-code.constant';
 import { IHttpSuccess, AppResponse } from 'src/shared/services/response-status';
 import UpdateModelDto from './dto/update.dt';
-import ModelSchema from './schema/model.schema';
+import ModelSchema from './schema/upload.schema';
 import Constants from './constants';
 import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
 import path, { join } from 'path';
@@ -101,6 +101,14 @@ class ModelController {
   public async removeAll(
   ): Promise<IHttpSuccess | HttpException> {
     const result = await this.modelService.removeAll()
+    return AppResponse.success(HTTP_STATUS.OK, ModelSchema.name);
+  }
+
+  @Delete(Constants.endpoint.REMOVE)
+  @ApiOperation({ summary: `-- delete ${ModelSchema.name} by ID` })
+  public async removeOneFile(@Param('id') id: string
+  ): Promise<IHttpSuccess | HttpException> {
+    const result = await this.modelService.removeOneFile(id)
     return AppResponse.success(HTTP_STATUS.OK, ModelSchema.name);
   }
 }

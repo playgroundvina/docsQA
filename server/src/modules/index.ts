@@ -6,11 +6,11 @@ import ModelModule from './example/model.module';
 import ChatGptModule from './chatgpt/chatgpt.module';
 import testsseModule from './testsse/model.module';
 export default [
-  testsseModule,
+  // testsseModule,
   UploadFileModule,
   ChatGptModule,
-  // UserModule,
-  // RoleModule,
-  // AuthModule,
+  UserModule,
+  RoleModule,
+  AuthModule,
   // ModelModule,
 ];
