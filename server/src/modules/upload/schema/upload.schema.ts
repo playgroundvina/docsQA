@@ -17,12 +17,13 @@ export default class File extends BaseSchema {
     required: true,
   })
   url: string;
+
   @IsString()
   @Prop({
     type: String,
     required: true,
   })
-  urlData: string;
+  urlModelAi: string;
 
   @IsString()
   @Prop({
