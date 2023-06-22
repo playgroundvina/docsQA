@@ -97,7 +97,7 @@ const Chat = () => {
         openWhenHidden: true,
         onmessage(e) {
           if (e?.data !== '[DONE]') {
-            let text = e?.data;
+            let text = e?.data.replace('*%#', '\n');
             resultRef.current = resultRef.current + text;
             setResult(resultRef.current);
           } else {
