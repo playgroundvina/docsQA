@@ -3,14 +3,14 @@
     "name": "DocsQA",
     "builds": [
         {
-            "src": "src/main.ts",
+            "src": "dist/main.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/index.js"
+            "dest": "/dist/main.js"
         }
     ]
 }
