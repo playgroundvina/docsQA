@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import ModelController from './model.controller';
-import ModelService from './model.service';
+import ModelController from './chatgpt.controller';
+import ModelService from './chatgpt.service';
 
 describe('RoleController', () => {
   let controller: ModelController;
