@@ -50,22 +50,33 @@ const Footer = ({ isLoading, inputMessage, setInputMessage, handleSendMessage, s
 
               />)
             }
-            <button
-              style={{
-                "background-color": `${theme}`,
-              }}
-              className={`${isLoading ? "loading" : ""
-                } btn btn-square overflow-hidden border-0`}
 
-              onClick={handleClickSendMessage}
-            >
-              {!isLoading && (
+            {documentQA?._id
+              ? (<button style={{ "background-color": `${theme}`, }}
+                className={`${isLoading ? "loading" : ""
+                  } btn btn-square overflow-hidden border-0`}
+                onClick={handleClickSendMessage}
+              >
+                {!isLoading && (
+                  <FontAwesomeIcon
+                    className="w-5 h-5 hover:scale-125 duration-300"
+                    icon="fa-solid fa-paper-plane"
+                  />
+                )}
+              </button>)
+              : (<button style={{ "background-color": `${theme}`, }}
+                className={`${isLoading ? "loading" : ""
+                  } btn btn-square overflow-hidden border-0`}
+                onClick={handleClickSendMessage}
+                disabled={true}
+              >
                 <FontAwesomeIcon
                   className="w-5 h-5 hover:scale-125 duration-300"
                   icon="fa-solid fa-paper-plane"
                 />
-              )}
-            </button>
+              </button>)
+            }
+
           </div>
         </div>
         <div className="flex justify-center">
