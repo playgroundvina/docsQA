@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import SelectLanguage2 from "./SelectLanguage2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,20 +16,27 @@ const Footer = ({ isLoading, inputMessage, setInputMessage, handleSendMessage, s
     }
   }
 
+  const focusInput = useCallback((input) => {
+    if (input) {
+      input.focus();
+    }
+  }, [isLoading]);
   return (
     <>
       <div className="w-auto px-2">
         <div className="form-control w-full ">
           <div className="input-group flex items-center justify-center">
+
             {documentQA?._id
               ? (<input
                 style={{
                   "background-color": `${theme}33`,
                 }}
+                ref={focusInput}
                 disabled={isLoading}
                 type="text"
                 placeholder="Type Something..."
-                className={`input  w-full disabled:bg-opacity-10  focus:outline-0 `}
+                className={`input  w-full disabled:bg-opacity-10  focus:outline-none `}
                 onKeyPress={(e) => {
                   if (e.key === "Enter") {
                     handleSendMessage();
@@ -39,7 +46,6 @@ const Footer = ({ isLoading, inputMessage, setInputMessage, handleSendMessage, s
                 onChange={(e) => setInputMessage(e.target.value)}
               />)
               : (<input
-
                 style={{
                   "background-color": `${theme}33`,
                 }}
@@ -50,22 +56,33 @@ const Footer = ({ isLoading, inputMessage, setInputMessage, handleSendMessage, s
 
               />)
             }
-            <button
-              style={{
-                "background-color": `${theme}`,
-              }}
-              className={`${isLoading ? "loading" : ""
-                } btn btn-square overflow-hidden border-0`}
 
-              onClick={handleClickSendMessage}
-            >
-              {!isLoading && (
+            {documentQA?._id
+              ? (<button style={{ "background-color": `${theme}`, }}
+                className={`${isLoading ? "loading" : ""
+                  } btn btn-square overflow-hidden border-0`}
+                onClick={handleClickSendMessage}
+              >
+                {!isLoading && (
+                  <FontAwesomeIcon
+                    className="w-5 h-5 hover:scale-125 duration-300"
+                    icon="fa-solid fa-paper-plane"
+                  />
+                )}
+              </button>)
+              : (<button style={{ "background-color": `${theme}`, }}
+                className={`${isLoading ? "loading" : ""
+                  } btn btn-square overflow-hidden border-0`}
+                onClick={handleClickSendMessage}
+                disabled={true}
+              >
                 <FontAwesomeIcon
                   className="w-5 h-5 hover:scale-125 duration-300"
                   icon="fa-solid fa-paper-plane"
                 />
-              )}
-            </button>
+              </button>)
+            }
+
           </div>
         </div>
         <div className="flex justify-center">

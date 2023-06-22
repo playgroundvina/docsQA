@@ -41,12 +41,12 @@ const Header = () => {
           <div className="">{documentQA?.filename}</div>
         </div>
         <div className="flex justify-between items-center space-x-0.5">
-          <button
+          <div
             onClick={() => { onRefresh() }}
-            className="btn w-8 btn-ghost btn-sm"
+            className="w-6 cursor-pointer"
           >
             <FontAwesomeIcon icon="fa-solid fa-rotate" />
-          </button>
+          </div>
           {/* <button
             onClick={() => {
               turnOffchatBot();
@@ -58,7 +58,7 @@ const Header = () => {
 
           <div
             ref={menuRef}
-            className="btn w-12 btn-ghost btn-sm lg:hidden flex items-center"
+            className="w-6 lg:hidden flex items-center cursor-pointer"
           >
             <img alt="" src="https://cdn-icons-png.flaticon.com/128/4543/4543046.png" onClick={() => {
               setOpen((prev) => prev === true ? false : true);

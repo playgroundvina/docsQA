@@ -26,8 +26,6 @@ const Chat = () => {
   const id = window.location.search.substring(1);
 
 
-
-
   // get messages history chat
   const dataGerHistoryChat = {
     id: documentQA?._id,
@@ -46,7 +44,7 @@ const Chat = () => {
     }
   }, [histories]);
 
-  // tạo user id
+  // create userId
   useEffect(() => {
     try {
       dispatch(getBot(id));
@@ -63,7 +61,7 @@ const Chat = () => {
     }
   }, []);
 
-  // lưu giá trị ban đâu của dữ liệu tream
+  // save data stream
   useEffect(() => {
     resultRef.current = result;
   }, [result]);
@@ -73,19 +71,58 @@ const Chat = () => {
     if (inputMessage !== '') {
       setResult('');
       setIsLoading(true);
+      // let data = {
+      //   documentId: documentQA?._id,
+      //   content: inputMessage,
+      //   language: language?.name
+      // };
+
       let data = {
-        documentId: documentQA?._id,
+
         content: inputMessage,
         language: language?.name
       };
-      dispatch(chatDoc(data))
+      let documentId = documentQA?._id;
+
+      // call api stream
+      let url = `${process.env.REACT_APP_URL_API}chatgpt/pdf/stream/${documentId}`;
+      const ctrl = new AbortController();
+      fetchEventSource(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+        signal: ctrl.signal,
+        openWhenHidden: true,
+        onmessage(e) {
+          if (e?.data !== '[DONE]') {
+            let text = e?.data.replace('*%#', '\n');
+            resultRef.current = resultRef.current + text;
+            setResult(resultRef.current);
+          } else {
+            setIsLoading(false);
+          }
+        },
+        onerror(err) {
+          console.log(err);
+          setIsLoading(false);
+          return;
+        },
+      });
+
+      //call api chat no stream
+      // dispatch(chatDoc(data))
+    }
+    if (!inputMessage.trim().length) {
+      return;
     }
     const data = inputMessage;
     setMessages((old) => [...old, { role: 'human', content: data }]);
     setInputMessage('');
   };
 
-  // gán lại giá trị sau khi chat
+  // add value chat
   useEffect(() => {
     setIsLoading(false);
     if (messagesResponse) {
@@ -93,7 +130,7 @@ const Chat = () => {
     }
   }, [messagesResponse]);
 
-  // set thêm dự liêu trả lời
+  // set data reply
   useEffect(() => {
     if (isLoading === false && result) {
       setMessages((old) => [...old, { role: 'ai', content: result }]);

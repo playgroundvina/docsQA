@@ -17,9 +17,7 @@ const Messages = ({ messages, result, isLoading }) => {
           return (
             <div key={index} className="chat chat-end">
               <div className="chat-image avatar">
-                {/* <div className="w-12 rounded-full">
-                  <img src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png" />
-                </div> */}
+
               </div>
               <div
                 style={{
@@ -35,8 +33,8 @@ const Messages = ({ messages, result, isLoading }) => {
           return (
             <div key={index} className="chat chat-start">
               <div className="chat-image avatar">
-                <div className="w-12 rounded-full">
-                  <img src="https://img.upanh.tv/2023/05/19/icon-chat-bot.png" alt="" />
+                <div className="w-14 h-auto rounded-full">
+                  <img src="https://i.imgur.com/ynuqsXa.png" alt="" />
                 </div>
               </div>
               <div
@@ -54,17 +52,17 @@ const Messages = ({ messages, result, isLoading }) => {
       {isLoading === true && (
         <div className="chat chat-start">
           <div className="chat-image avatar">
-            <div className="w-12 rounded-full">
-              <img src="https://img.upanh.tv/2023/05/19/icon-chat-bot.png" alt="" />
+            <div className="w-14 rounded-full">
+              <img src="https://i.imgur.com/ynuqsXa.png" alt="" />
             </div>
           </div>
           <div
             style={{
               'background-color': `${theme}66`,
             }}
-            className={` chat-bubble whitespace-pre-line`}
+            className={` chat-bubble whitespace-pre-line flex items-center justify-center`}
           >
-            {result}
+            {result ? result : (<div className='loading loading-dots loading-xs'></div>)}
           </div>
         </div>
       )}
