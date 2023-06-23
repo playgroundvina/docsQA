@@ -32,6 +32,7 @@
     "@nestjs/serve-static": "^3.0.1",
     "@nestjs/swagger": "^6.3.0",
     "bcrypt": "^5.1.0",
+    "chromadb": "^1.5.2",
     "class-validator": "^0.14.0",
     "helmet": "^7.0.0",
     "hnswlib-node": "^1.4.2",
