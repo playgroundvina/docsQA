@@ -48,10 +48,8 @@ const Left = ({ setOpen }) => {
     }
 
     const handleClick = (id, doc) => {
-
         setActive(id);
         if (id === doc._id) {
-
             dispatch(getSingleDoc(doc))
             if (screenMode === 'mobile') {
                 setOpen(false)
