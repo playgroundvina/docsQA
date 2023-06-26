@@ -18,7 +18,7 @@ import { MulterModule } from '@nestjs/platform-express';
       rootPath: join(__dirname, '..', 'public'),
     }),
     ConfigModule.forRoot({
-      envFilePath: ['.development.env'], // https://docs.nestjs.com/techniques/configuration
+      envFilePath: ['.env', '.development.env'], // https://docs.nestjs.com/techniques/configuration
       isGlobal: true,
     }),
     DatabaseModule,
@@ -33,4 +33,4 @@ import { MulterModule } from '@nestjs/platform-express';
     AppService,
   ],
 })
-export class AppModule {}
+export class AppModule { }
