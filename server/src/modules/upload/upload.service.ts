@@ -44,11 +44,25 @@ class ModelService extends BaseService<ModelSchema> {
     // const apiKey = `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`
     // const apiKey = `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`
     // const apiKey = `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`
-    const apiKey = `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`
+    // const apiKey = `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`
+    // const apiKey = `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`
+    // const apiKey = `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`
+    // const apiKey = `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`
+    // const apiKey = `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`
+    // const apiKey = `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`
+    const apiKey = `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`
 
-    const vectorStore = await HNSWLib.fromDocuments(docs, new OpenAIEmbeddings({ openAIApiKey: apiKey }));
+    let vectorStore
+    try {
+      vectorStore = await HNSWLib.fromDocuments(docs, new OpenAIEmbeddings({ openAIApiKey: apiKey }));
+    } catch (error) {
+      console.log(error);
+
+    }
     const directory = `./modelai/${id_owner}/${fileNameNotExtension}`;
-    await vectorStore.save(directory);
+    if (vectorStore) {
+      await vectorStore.save(directory);
+    }
     // const result2 = await fs.promises.writeFile(`${path}/${fileNameNotExtension}.txt`, text[0].pageContent);
 
   }

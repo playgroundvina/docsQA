@@ -78,7 +78,13 @@ class ModelChatGptService extends BaseService<ModelSchema> {
     // const apiKey = `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`
     // const apiKey = `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`
     // const apiKey = `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`
-    const apiKey = `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`
+    // const apiKey = `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`
+    // const apiKey = `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`
+    // const apiKey = `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`
+    // const apiKey = `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`
+    // const apiKey = `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`
+    // const apiKey = `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`
+    const apiKey = `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`
 
 
     let streamedResponse = "";
@@ -168,10 +174,8 @@ class ModelChatGptService extends BaseService<ModelSchema> {
     const directory = `./modelai/${file?.urlModelAi}`
     /* Initialize the LLM to use to answer the question */
     // return historychat
-    // const apiKey = `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`
-    // const apiKey = `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`
-    // const apiKey = `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`
-    const apiKey = `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`
+    const apiKey = `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`
+
 
     let streamedResponse = "";
     const model = new OpenAI({
@@ -260,7 +264,7 @@ class ModelChatGptService extends BaseService<ModelSchema> {
 
 
     //lấy lịch sử chat ra
-    const historychat = (await this.findAllIdFile(id, 1, 6)).reverse();
+    const historychat = (await this.findAllIdFile(id, 1, 2)).reverse();
 
     //lưu câu trả lời người dùng
     const resultHuman = await this.create(id, createModelDto.content);
