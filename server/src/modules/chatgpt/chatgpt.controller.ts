@@ -39,59 +39,6 @@ import { take } from 'rxjs/operators';
 class ModelController {
   constructor(private readonly modelService: ModelService) { }
 
-  @Post('test')
-  posttest(@Res() response: Response) {
-    // const a = ServerSentEvent.fromEvent()
-
-
-  }
-
-  // @Post('stream')
-  // @Sse()
-  // async streamData(): Promise<Observable<object>> {
-  //   let body = new CreateModelDto()
-  //   body.content = "hãy tóm tắt nội dung chính"
-  //   body.language = "vietnamese"
-  //   const id = '64925b8c2fbe762d3180863f'
-
-  //   await this.modelService.chatStream(id, body);
-  //   const token$ = this.modelService.getTokenStream();
-  //   return token$.pipe(
-  //     map((token) => ({ data: { token } })),
-  //   );
-
-
-  // }
-
-  @Get('test')
-  index(@Res() response: Response) {
-    response.type('text/html')
-      .send(readFileSync(join(__dirname, 'index.html')).toString());
-  }
-
-  @Get('quanglai')
-  quanglai(@Res() res: Response) {
-    return interval(5000).pipe(
-      map((count) => {
-        res.write(`Đây là lần trả về thứ ${count + 1}.\n`);
-        if (count === 3) {
-          res.end();
-        }
-        return '';
-      }),
-    );
-  }
-
-
-  // @Sse('sse')
-  // async sse(): Promise<Observable<MessageEvent>> {
-  //   let body = new CreateModelDto()
-  //   body.content = "hãy tóm tắt nội dung chính"
-  //   body.language = "vietnamese"
-  //   const id = '64925b8c2fbe762d3180863f'
-  //   return await this.modelService.chatStream(id, body);
-  // }
-
   @Get(Constants.endpoint.FIND_ALL_BY_FILE)
   @ApiOperation({ summary: `-- Get ALL ${ModelSchema.name}s by id file` })
   public async findByOwner(
@@ -138,17 +85,6 @@ class ModelController {
     return AppResponse.success(HTTP_STATUS.OK, ModelSchema.name, result);
   }
 
-  // @Post(Constants.endpoint.CHATSTREAM)
-  // @ApiOperation({ summary: `-- chat Steam with ${ModelSchema.name}` })
-  // public async chatSteam(
-  //   @Param('id') id: string,
-  //   @Body() body: CreateModelDto,
-  // ): Promise<Observable<MessageEvent>> {
-  //   const result = await this.modelService.chatStream(id, body)
-  //   console.log({ result });
-  //   return result
-  //   // return AppResponse.success(HTTP_STATUS.OK, ModelSchema.name, result);
-  // }
 
   @Delete()
   @ApiOperation({ summary: `-- delete all${ModelSchema.name}` })

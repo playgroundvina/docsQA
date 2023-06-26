@@ -43,7 +43,9 @@ class ModelService extends BaseService<ModelSchema> {
     // const apiKey = `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`
     // const apiKey = `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`
     // const apiKey = `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`
-    const apiKey = `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`
+    // const apiKey = `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`
+    const apiKey = `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`
+
     const vectorStore = await HNSWLib.fromDocuments(docs, new OpenAIEmbeddings({ openAIApiKey: apiKey }));
     const directory = `./modelai/${id_owner}/${fileNameNotExtension}`;
     await vectorStore.save(directory);
