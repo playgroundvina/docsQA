@@ -18,7 +18,6 @@ export const uploadDoc = createAsyncThunk("doc/postDoc", async (data, thunkAPI) 
         const dataPostDoc = data[1]
         const url = `upload`;
         //const response = await docQAService.postDoc(dataPostDoc);
-        console.log(dataPostDoc?.file.length)
         if (dataPostDoc?.file.length <= 0) {
             toast.warning(`Please select the document you want to upload`)
             return;
@@ -32,7 +31,7 @@ export const uploadDoc = createAsyncThunk("doc/postDoc", async (data, thunkAPI) 
                 paramsSerializer: (params) => queryString.stringify(params),
             });
             const response = await axiosClient.post(url, dataPostDoc);
-
+            // console.log(response?.response?.data?.error)
             thunkAPI.dispatch(getDoc(dataGetListDoc));
             if (response.data) {
                 toast.success('uploaded successfully')
